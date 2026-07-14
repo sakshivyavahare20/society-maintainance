@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Society Maintenance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Admin Dashboard</h1>
+        <p>Society Maintenance Tracker</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="dashboard-card">
+                <h3>Total Complaints</h3>
+                <h2>15</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Open</h3>
+                <h2>5</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Resolved</h3>
+                <h2>8</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Overdue</h3>
+                <h2>2</h2>
+            </div>
+
+        </section>
+
+        <!-- Complaint Table -->
+        <div class="card">
+
+            <h2>Manage Complaints</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="complaintTable">
+                    <!-- Filled by script.js -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Update Complaint -->
+        <div class="card">
+
+            <h2>Update Complaint</h2>
+
+            <label>Complaint ID</label>
+            <input type="number" placeholder="Enter Complaint ID">
+
+            <label>Priority</label>
+            <select>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+            <label>Status</label>
+            <select>
+                <option>Open</option>
+                <option>In Progress</option>
+                <option>Resolved</option>
+            </select>
+
+            <label>Admin Note</label>
+            <textarea rows="4" placeholder="Enter update note"></textarea>
+
+            <button onclick="updateComplaint()">
+                Update Complaint
+            </button>
+
+        </div>
+
+        <!-- Notice Board -->
+        <div class="card">
+
+            <h2>Post Notice</h2>
+
+            <label>Notice Title</label>
+            <input type="text" placeholder="Enter notice title">
+
+            <label>Description</label>
+            <textarea rows="4" placeholder="Enter notice"></textarea>
+
+            <label>
+                <input type="checkbox">
+                Mark as Important
+            </label>
+
+            <button onclick="postNotice()">
+                Post Notice
+            </button>
+
+        </div>
+
+        <!-- Existing Notices -->
+        <div class="card">
+
+            <h2>Notice Board</h2>
+
+            <div id="noticeBoard">
+                <!-- Filled by script.js -->
+            </div>
+
+        </div>
+
+        <div style="margin-top:20px;">
+            <a href="index.html" class="btn">Home</a>
+            <a href="login.html" class="btn">Logout</a>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
