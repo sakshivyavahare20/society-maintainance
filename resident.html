@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Dashboard | Society Maintenance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Resident Dashboard</h1>
+        <p>Welcome to Society Maintenance Tracker</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Raise Complaint -->
+        <div class="card">
+
+            <h2>Raise a Complaint</h2>
+
+            <label>Category</label>
+            <select>
+                <option>Electrical</option>
+                <option>Water</option>
+                <option>Cleaning</option>
+                <option>Security</option>
+                <option>Lift</option>
+                <option>Other</option>
+            </select>
+
+            <label>Description</label>
+            <textarea rows="5" placeholder="Describe your issue..."></textarea>
+
+            <label>Upload Photo (Optional)</label>
+            <input type="file">
+
+            <button onclick="submitComplaint()">
+                Submit Complaint
+            </button>
+
+        </div>
+
+        <!-- My Complaints -->
+        <div class="card">
+
+            <h2>My Complaints</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="complaintTable">
+                    <!-- Filled by script.js -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Complaint Status History -->
+        <div class="card">
+
+            <h2>Complaint Status History</h2>
+
+            <ul>
+                <li><strong>Complaint #1</strong> - Open (10 Jul 2026)</li>
+                <li><strong>Complaint #1</strong> - In Progress (11 Jul 2026)</li>
+                <li><strong>Complaint #1</strong> - Resolved (12 Jul 2026)</li>
+            </ul>
+
+        </div>
+
+        <!-- Notice Board -->
+        <div class="card">
+
+            <h2>Notice Board</h2>
+
+            <div id="noticeBoard">
+                <!-- Filled by script.js -->
+            </div>
+
+        </div>
+
+        <div style="margin-top:20px;">
+            <a href="index.html" class="btn">Home</a>
+            <a href="login.html" class="btn">Logout</a>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
