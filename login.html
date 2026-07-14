@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Society Maintenance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Society Maintenance Tracker</h1>
+        <p>Login to Continue</p>
+    </header>
+
+    <main class="container">
+
+        <form>
+
+            <h2>Login</h2>
+
+            <label>Email</label>
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Password</label>
+            <input
+                type="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <label>Login As</label>
+            <select>
+                <option>Resident</option>
+                <option>Admin</option>
+            </select>
+
+            <button type="button" onclick="login()">
+                Login
+            </button>
+
+            <br><br>
+
+            <p style="text-align:center;">
+                Don't have an account?
+                <a href="#">Register</a>
+            </p>
+
+            <br>
+
+            <p style="text-align:center;">
+                <a href="index.html">← Back to Home</a>
+            </p>
+
+        </form>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
